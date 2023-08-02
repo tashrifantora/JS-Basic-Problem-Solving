@@ -48,4 +48,23 @@ const MyNumbers2 = [25, 98, 45, 63, 21, 74, 55];
 const oddNumbers = getOddNumbersOfArray(MyNumbers2);
 const OddNumbersSum = getSumOFAnArray(oddNumbers);
 
-console.log(OddNumbersSum);
+// console.log(OddNumbersSum);
+
+
+/* 
+Problem 4
+[Revers Factorial]
+*/
+function reversFactorial(number) {
+    let result = 1;
+    for (let i = number; i >= 1; i--) {
+        result = result * i
+    }
+    return result;
+}
+const number = 6;
+const factorial = reversFactorial(number);
+console.log(factorial);
+
+
+
