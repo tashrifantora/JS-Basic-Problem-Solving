@@ -78,3 +78,25 @@ function hourToMin(hour) {
 const hour = 2;
 const result = hourToMin(hour);
 console.log(result);
+
+
+// Problem 6
+
+function leapYear(year) {
+    let leapYear = [];
+    for (let i = 0; i < year.length; i++) {
+        const element = year[i];
+        const remainder = element % 4;
+        if (remainder === 0) {
+            leapYear.push(element);
+        }
+        else {
+            console.log('Its not leap year')
+        }
+    }
+    return leapYear;
+}
+
+const yearArray = [2023, 2024, 2025, 2028, 2030];
+const leapYearResult = leapYear(yearArray);
+console.log(leapYearResult);
