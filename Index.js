@@ -68,3 +68,13 @@ console.log(factorial);
 
 
 
+// 03.08.23 [Module - 20]
+// Problem 5 
+function hourToMin(hour) {
+    const min = hour * 60;
+    return min
+}
+
+const hour = 2;
+const result = hourToMin(hour);
+console.log(result);
