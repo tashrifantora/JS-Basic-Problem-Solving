@@ -100,3 +100,25 @@ function leapYear(year) {
 const yearArray = [2023, 2024, 2025, 2028, 2030];
 const leapYearResult = leapYear(yearArray);
 console.log(leapYearResult);
+
+
+
+/* 
+Problem 7
+[Find lowest number ]
+*/
+function lowestNumber(numArray) {
+    let lowest = numArray[0];
+    for (let i = 1; i < numArray.length; i++) {
+        const element = numArray[i];
+        if (element < lowest) {
+            lowest = element;
+        }
+    }
+    return lowest;
+
+}
+
+const numberArr = [325, 187, 514, 236, 871, 981, 214];
+const res = lowestNumber(numberArr);
+console.log('Lowest is:', res);
