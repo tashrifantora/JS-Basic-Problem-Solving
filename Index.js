@@ -122,3 +122,13 @@ function lowestNumber(numArray) {
 const numberArr = [325, 187, 514, 236, 871, 981, 214];
 const res = lowestNumber(numberArr);
 console.log('Lowest is:', res);
+
+/* 
+Problem 8
+[Fibo nacchi===]
+*/
+const fibo = [0, 1];
+for (let i = 2; i <= 15; i++) {
+    fibo[i] = fibo[i - 1] + fibo[i - 2];
+}
+// console.log(fibo);
