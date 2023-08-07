@@ -132,3 +132,135 @@ for (let i = 2; i <= 15; i++) {
     fibo[i] = fibo[i - 1] + fibo[i - 2];
 }
 // console.log(fibo);
+
+
+/* 
+Problem 9
+[duplicet Remove]
+*/
+function removeDuplicate(names) {
+    let unique = [];
+    for (let i = 0; i < names.length; i++) {
+        const element = names[i]
+        if (unique.includes(element) === false) {
+            unique.push(element);
+        }
+    }
+    return unique
+}
+
+const names = ['ali', 'rita', 'rina', 'habib', 'ali', 'sonia', 'rita', 'sona', 'sonam', 'sona'];
+const uniqueName = removeDuplicate(names);
+console.log(uniqueName)
+
+/* 
+Problem 10
+[
+    1. Show output from: 1-50
+    2. If the number is divisable by 3 then instade of the number show 'Foo'
+    3. If the number is divisable by 5 then instade of the number show 'Bar'
+    3. If the number is divisable by 3 & 5 then instade of the number show 'FooBar'
+]
+*/
+function fooBar() {
+    for (let i = 1; i <= 50; i++) {
+
+        if (i % 3 === 0 && i % 5 === 0) {
+            console.log('FooBar');
+        }
+        else if (i % 3 === 0) {
+            console.log("Foo");
+        }
+        else if (i % 5 === 0) {
+            console.log('Bar')
+        }
+        else {
+            console.log(i)
+        }
+    }
+    return
+}
+fooBar()
+
+/* 
+Problem 11
+[Highest Camera]
+*/
+const phones = [
+    { name: 'iphone', camera: 40, color: 'lavender' },
+    { name: 'Oppo', camera: 28, color: 'red' },
+    { name: 'vivo', camera: 90, color: 'black' },
+    { name: 'redmi', camera: 200, color: 'lavender' },
+    { name: 'nokia', camera: 120, color: 'lavender' },
+    { name: 'infinix', camera: 16, color: 'lavender' },
+];
+function highestCam(phones) {
+    let highest = phones[0]
+    for (let i = 0; i < phones.length; i++) {
+        const phone = phones[i];
+        if (phone.camera > highest.camera) {
+            highest = phone;
+        }
+    }
+    return highest;
+}
+const selectedOne = highestCam(phones);
+console.log(selectedOne);
+
+
+/* 
+Problem 12
+[Discount on condition]
+*/
+
+function tickitPrice(tickitQuantity) {
+    const first100Rate = 100;
+    const second100Rate = 90;
+    const restTickitRate = 70;
+    if (tickitQuantity <= 100) {
+        const price = tickitQuantity * first100Rate;
+        return price;
+    }
+    else if (tickitQuantity <= 200) {
+        const first100Price = 100 * first100Rate;
+        const restTickitQuantity = tickitQuantity - 100;
+        const restTickitPrice = restTickitQuantity * second100Rate;
+        const totalPrice = first100Price + restTickitPrice;
+        return totalPrice;
+    }
+    else {
+        const first100Price = 100 * first100Rate;
+        const second100Price = 100 * second100Rate;
+        const restTickitQuantity = tickitQuantity - 200;
+        const restTickitPrice = restTickitQuantity * restTickitRate;
+        const totalCost = first100Price + second100Price + restTickitPrice;
+        return totalCost
+
+    }
+}
+
+const price = tickitPrice(12);
+console.log(price);
+
+
+/* 
+Problem 13
+[Practice problem]
+*/
+function findingBadData(array) {
+    let goodNum = [];
+    let badNum = [];
+    for (let i = 0; i < array.length; i++) {
+        const element = array[i]
+        if (element < 0) {
+            badNum.push(element)
+        }
+        else {
+            goodNum.push(element)
+        }
+    }
+    return [badNum, goodNum];
+}
+const theArray = [25, 65, 47, 12, -55, -14, -10, 0, 99, -100];
+const result2 = findingBadData(theArray);
+console.log(result2);
