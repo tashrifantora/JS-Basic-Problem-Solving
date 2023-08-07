@@ -264,3 +264,36 @@ function findingBadData(array) {
 const theArray = [25, 65, 47, 12, -55, -14, -10, 0, 99, -100];
 const result2 = findingBadData(theArray);
 console.log(result2);
+
+
+/* 
+Problem 14
+[Last element cheacking] Way: 1(Hard)
+*/
+function isJavaScriptFile(fileName) {
+    if (typeof fileName !== "string") {
+        return "Please provide me a valid string name"
+    }
+    else {
+        const arr = fileName.split(".");
+        const lastElement = arr.pop();
+        return lastElement.toLocaleLowerCase() === "js";
+    }
+}
+const fileType = isJavaScriptFile('index.js');
+console.log(fileType);
+
+
+/* 
+Problem 14
+[Last element cheacking] Way: 1(Easy)
+*/
+function isJavaScriptFile(fileName) {
+    if (typeof fileName !== "string") {
+        return "Please provide me a valid string name"
+    }
+
+    return fileName.toLocaleLowerCase().endsWith('.js');
+}
+const fileType2 = isJavaScriptFile('index.html');
+console.log(fileType2);
